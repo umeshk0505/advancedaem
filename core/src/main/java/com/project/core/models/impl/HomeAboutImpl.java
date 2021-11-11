@@ -58,8 +58,5 @@ public class HomeAboutImpl implements HomeAbout {
         return path;
     }
 
-    @JsonProperty(value = "author-message")
-    public String authorMessage(){
-        return "Don't ever set a complicated goal in life.\\r\\nThe More you stay simple, the more happier in life you'll be";
-    }
+
 }
