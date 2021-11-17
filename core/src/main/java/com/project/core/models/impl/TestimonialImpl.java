@@ -32,15 +32,15 @@ public class TestimonialImpl implements Testimonial {
     final protected static String RESOURCE_TYPE="/apps/project/components/content/testimonial";
 
     @ChildResource
-    Resource testimonialDetailsWithMap;
+    Resource testimonialdetailswithmap;
 
     @Override
     public List<Map<String, String>> getTestimonialDetailsWithMap() {
         List<Map<String, String>> testimonialDetailsMap=new ArrayList<>();
         try {
           //  Resource testimonialDetail=componentResource.getChild("testimonialdetailswithmap");
-            if(testimonialDetailsWithMap!=null){
-                for (Resource testimonial : testimonialDetailsWithMap.getChildren()) {
+            if(testimonialdetailswithmap!=null){
+                for (Resource testimonial : testimonialdetailswithmap.getChildren()) {
                     Map<String,String> testimonialMap =new HashMap<>();
                     testimonialMap.put("title",testimonial.getValueMap().get("title",String.class));
                     testimonialMap.put("heading",testimonial.getValueMap().get("heading",String.class));
