@@ -36,7 +36,7 @@ import javax.inject.Inject;
 
 
         @ValueMapValue
-        String image;
+        String fileReference;
 
         @Inject
         String path;
@@ -68,6 +68,6 @@ import javax.inject.Inject;
 
         @Override
         public String getImage() {
-            return image;
+            return fileReference;
         }
     }

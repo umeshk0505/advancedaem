@@ -39,7 +39,7 @@
                         class="cq-droptarget"
                         fieldLabel="Image"
                         fileNameParameter="./fileName"
-                        fileReferenceParameter="./image"
+                        fileReferenceParameter="./fileReference"
                         mimeTypes="[image]"
                         multiple="{Boolean}false"
                         name="./image"
