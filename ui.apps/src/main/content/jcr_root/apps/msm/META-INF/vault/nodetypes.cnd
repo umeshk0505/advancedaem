@@ -1,0 +1,53 @@
+<'cq'='http://www.day.com/jcr/cq/1.0'>
+<'nt'='http://www.jcp.org/jcr/nt/1.0'>
+<'jcr'='http://www.jcp.org/jcr/1.0'>
+<'sling'='http://sling.apache.org/jcr/sling/1.0'>
+<'mix'='http://www.jcp.org/jcr/mix/1.0'>
+<'rep'='internal'>
+
+[cq:Widget] > nt:unstructured
+  orderable
+  - name (string)
+  - xtype (string)
+  - title (string)
+  + items (nt:base) = cq:WidgetCollection
+
+[cq:WidgetCollection] > nt:unstructured
+  orderable
+  + * (cq:Widget) = cq:Widget
+
+[cq:Page] > nt:hierarchyNode
+  orderable primaryitem jcr:content
+  + jcr:content (nt:base) = nt:unstructured
+  + * (nt:base) = nt:base version
+
+[cq:TabPanel] > cq:Panel
+  orderable
+  - activeTab (long)
+
+[cq:Panel] > cq:Widget
+  orderable
+
+[sling:OrderedFolder] > sling:Folder
+  orderable
+  + * (nt:base) = sling:OrderedFolder version
+
+[sling:Folder] > nt:folder
+  - * (undefined) multiple
+  - * (undefined)
+  + * (nt:base) = sling:Folder version
+
+[cq:RolloutConfig] > mix:title
+  orderable
+  - cq:trigger (string) mandatory
+  + * (cq:LiveSyncAction) mandatory
+
+[cq:LiveSyncAction] > nt:unstructured
+
+[cq:Dialog] > cq:Widget
+  orderable
+
+[rep:RepoAccessControllable]
+  mixin
+  + rep:repoPolicy (rep:Policy) protected ignore
+
