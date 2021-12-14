@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Addition Servlet"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <general
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="homebannerAddition Servlet"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                    <items jcr:primaryType="nt:unstructured">
+                        <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            fieldLabel="Title"
+                            name="./title">
+                            <items jcr:primaryType="nt:unstructured">
+                                <num1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Num1"
+                                    name="./num1"/>
+                                <num2
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Num2"
+                                    name="./num2"/>
+                            </items>
+                        </column>
+                    </items>
+                </general>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>
