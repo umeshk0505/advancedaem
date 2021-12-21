@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import javax.annotation.PostConstruct;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith({AemContextExtension.class, MockitoExtension.class})
@@ -23,13 +25,7 @@ class HomeBannerImplTest {
 
     @Test
     void getBio() {
-        /*
-        //        aemContext.resourceResolver().getResource("/content");
-        Resource json = aemContext.resourceResolver().getResource("/content");
-        homeBanner = json.adaptTo(HomeBanner.class);
-        final String e = "This is Me";
-        String a = homeBanner.getBio();
-        assertEquals(e,a);*/
+
 
         Resource json = aemContext.resourceResolver().getResource("/content/homebanner");
         homeBanner = json.adaptTo(HomeBanner.class);
@@ -64,9 +60,9 @@ class HomeBannerImplTest {
         assertEquals("/content/project/us/en/about", homeBanner.getPath());
     }
 
-    @Test
+    @PostConstruct
     void getImage() {
-        Resource json = aemContext.resourceResolver().getResource("/content/homebanner");
+        Resource json = aemContext.currentResource("/content/homebanner");
         homeBanner = json.adaptTo(HomeBanner.class);
         assertEquals("/content/dam/project/hero-img.png", homeBanner.getImage());
     }
