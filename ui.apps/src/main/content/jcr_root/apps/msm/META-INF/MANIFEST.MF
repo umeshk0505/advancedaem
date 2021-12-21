@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Content-Package-Id: my_packages:msm
+Content-Package-Roots: /apps/msm/personal-blueprint
+Content-Package-Type: application
+
