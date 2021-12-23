@@ -33,16 +33,16 @@ public class DateUpdateImpl implements DateUpdate{
     @Reference
     ResourceResolverFactory resourceResolverFactory;
 
+    String path = "/content/project/us/en/blde/jcr:content/root/container/container/schedulerdemo";
 
     @Override
-    public void updateDate() {
+    public String updateDate(String path) {
         try{
             ResourceResolver serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory);
             Session session = serviceResourceResolver.adaptTo(Session.class);
-            Resource resource = serviceResourceResolver.getResource("/content/project/us/en/blde/jcr:content/root/container/container/schedulerdemo");
+            Resource resource = serviceResourceResolver.getResource(path);
             Node node = resource.adaptTo(Node.class);
-
-            node.setProperty("time" , DateUtil.parseISO8601(DateUtil.getISO8601Date(new Date())));
+            node.setProperty("time" , DateUtil.parseISO8601(DateUtil.getISO8601Date(Calendar.getInstance())));
 
 
             session.save();
@@ -50,5 +50,6 @@ public class DateUpdateImpl implements DateUpdate{
         } catch (Exception e) {
 
         }
+        return path;
     }
 }

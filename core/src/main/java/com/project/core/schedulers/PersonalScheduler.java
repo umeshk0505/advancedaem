@@ -79,7 +79,8 @@ public class PersonalScheduler implements Runnable {
         }*/
 
         //LOG.info("Time has changed");
-        dateUpdate.updateDate();
+        String path = "/content/project/us/en/blde/jcr:content/root/container/container/schedulerdemo";
+        dateUpdate.updateDate(path);
 
     }
 }
