@@ -1,0 +1,10 @@
+{ "osgi":
+{
+  "serviceName": "A",
+  "serviceCount": 2,
+  "liveData": false,
+  "countries": "[us,en]",
+  "runModes": "cq"
+
+}
+}
