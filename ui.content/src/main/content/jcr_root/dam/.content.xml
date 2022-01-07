@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content/>
+    <asset.jpg/>
+    <about-img.png/>
+    <b1.jpg/>
+    <b2.jpg/>
+    <b3.jpg/>
+    <hero-img.png/>
+    <l1.png/>
+    <l2.png/>
+    <l3.png/>
+    <l4.png/>
+    <l5.png/>
+    <logo.png/>
+    <p1.jpg/>
+    <p2.jpg/>
+    <p3.jpg/>
+    <p4.jpg/>
+    <p5.jpg/>
+    <p6.jpg/>
+    <preview.png/>
+    <user.png/>
+    <content-fragments/>
+    <dropdown3.json/>
+    <country.json/>
+    <color.json/>
+    <font.json/>
+    <color1.json/>
+    <country1.json/>
+    <font1.json/>
+</jcr:root>
