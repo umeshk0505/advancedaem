@@ -7,7 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Map;
 
 public class ResolverUtils {
@@ -18,18 +17,12 @@ public class ResolverUtils {
     public static final String SERVICE_USER = "project";
 
     public static ResourceResolver newResolver(ResourceResolverFactory resourceResolverFactory) throws LoginException {
-        final Logger LOG = LoggerFactory.getLogger(ResolverUtils.class);
+        final Logger log = LoggerFactory.getLogger(ResolverUtils.class);
         final Map <String, Object > param = Collections.singletonMap(ResourceResolverFactory.SUBSERVICE,  SERVICE_USER);
         ResourceResolver resourceResolver = resourceResolverFactory.getServiceResourceResolver(param);
-        //final Map<String, Object> paramMap = new HashMap<String, Object>();
-        LOG.info("\n inside ResolverUtils");
-        LOG.info("\n inside ResolverUtils");
-        //paramMap.put(resourceResolverFactory.SUBSERVICE, SERVICE_USER);
-        //resolver = resourceResolverFactory.getServiceResourceResolver(paramMap);
-        // ResourceResolver resolver = null;
-        LOG.info("Map Values"+param.toString());
+        log.info("\n inside ResolverUtils");
+        log.info("\n inside ResolverUtils");
 
-        LOG.info("\n inside ResolverUtils-----------"+resourceResolver);
         return resourceResolver;
     }
 }
