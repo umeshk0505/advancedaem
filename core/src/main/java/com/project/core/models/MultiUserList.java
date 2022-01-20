@@ -8,5 +8,5 @@ import java.util.Map;
 
 public interface MultiUserList {
     public List<Map<String,String>> getUssers() throws JSONException, IOException;
-    public String getUrl();
+    public String getUrl(String initialPath);
 }

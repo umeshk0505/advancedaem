@@ -7,11 +7,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
+import java.util.Scanner;
 
-public class JSONLoaders {
-    private static final String USER_AGENT = "Mozilla/5.0";
-    public static String readJson(String url) {
-        try {
+public class JSONLoaders {/*
+    private static final String USER_AGENT = "Mozilla/5.0";*/
+    public static String readJson(String url){
+        /*try {
             URL requestURL = new URL(url);
             HttpsURLConnection connection = (HttpsURLConnection) requestURL.openConnection();
             connection.setRequestMethod("GET");
@@ -31,7 +33,24 @@ public class JSONLoaders {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        }*/
+        StringBuffer output = new StringBuffer();
+        try{
+            URL url1 = new URL(url);
+            Scanner scanner = new Scanner(url1.openStream());
+            //BufferedReader br = new BufferedReader(new InputStreamReader(url1.openStream()));
+            String line = "";
+            while(scanner.hasNextLine()){
+                line = scanner.nextLine();
+                output.append(line);
+            }
+            return output.toString();
+        }catch (MalformedURLException malformedURLException){
+
+        }catch (IOException ioException){
+
         }
-        return "";
+        return "There was no data found";
+
     }
 }
