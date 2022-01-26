@@ -33,25 +33,21 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.TreeMap;
 
-import static com.project.core.constants.AppConstants.EQUALS;
+import static com.project.core.constants.AppConstants.ABC;
 import static org.apache.sling.api.servlets.ServletResolverConstants.SLING_SERVLET_RESOURCE_TYPES;
 import static com.project.core.constants.AppConstants.COLOR_LIST;
-import static com.project.core.constants.AppConstants.COLOR_LIST_PATH;
 import static com.project.core.constants.AppConstants.COUNTRY_LIST;
-import static com.project.core.constants.AppConstants.COUNTRY_LIST_PATH;
 import static com.project.core.constants.AppConstants.DATASOURCE;
 import static com.project.core.constants.AppConstants.DROPDOWN_SELECTOR;
-import static com.project.core.constants.AppConstants.EQUALS;
 import static com.project.core.constants.AppConstants.FONT_LIST;
-import static com.project.core.constants.AppConstants.FONT_LIST_PATH;
 import static com.project.core.servlets.DynamicDataSourceServlet.RESOURCE_TYPE;
 import static com.project.core.servlets.DynamicDataSourceServlet.SERVICE_NAME;
 
 @Component(
         service = Servlet.class,
         property = {
-                Constants.SERVICE_ID + EQUALS + SERVICE_NAME,
-                SLING_SERVLET_RESOURCE_TYPES + EQUALS + RESOURCE_TYPE
+                Constants.SERVICE_ID + ABC + SERVICE_NAME,
+                SLING_SERVLET_RESOURCE_TYPES + ABC + RESOURCE_TYPE
         }
 )
 public class DynamicDataSourceServlet extends SlingSafeMethodsServlet {
@@ -115,13 +111,13 @@ public class DynamicDataSourceServlet extends SlingSafeMethodsServlet {
         Resource jsonResource;
         switch (dropdownSelector) {
             case COUNTRY_LIST:
-                jsonResource = resourceResolver.getResource(COUNTRY_LIST_PATH);
+                jsonResource = resourceResolver.getResource("/content/dam/project/country1.json");
                 break;
             case COLOR_LIST:
-                jsonResource = resourceResolver.getResource(COLOR_LIST_PATH);
+                jsonResource = resourceResolver.getResource("/content/dam/project/color1.json");
                 break;
             case FONT_LIST:
-                jsonResource = resourceResolver.getResource(FONT_LIST_PATH);
+                jsonResource = resourceResolver.getResource("/content/dam/project/font1.json");
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + dropdownSelector);

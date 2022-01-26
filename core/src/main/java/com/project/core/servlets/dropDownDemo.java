@@ -22,7 +22,7 @@ import java.util.List;
         property = {
                 "sling.servlet.resourceTypes=" + "/apps/dropdown3"
         })
-public class dropDownDemo extends SlingSafeMethodsServlet {
+public class DropDownDemo extends SlingSafeMethodsServlet {
     @Override
     protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws IOException {
         ResourceResolver resourceResolver = request.getResourceResolver();
@@ -33,9 +33,9 @@ public class dropDownDemo extends SlingSafeMethodsServlet {
             value = fieldVal[0];
         }
 
-        ValueMap vm = new ValueMapDecorator(new java.util.HashMap<String, Object>());
+        ValueMap vm = new ValueMapDecorator(new java.util.HashMap<>());
         vm.put("value", value);
-        List<Resource> resourceList = new ArrayList<Resource>();
+        List<Resource> resourceList = new ArrayList<>();
         resourceList.add(new ValueMapResource(resourceResolver, new ResourceMetadata(), "nt:unstructured", vm));
         request.setAttribute(DataSource.class.getName(), new SimpleDataSource(resourceList.iterator()));
     }

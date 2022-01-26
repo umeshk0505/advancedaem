@@ -2,7 +2,7 @@ package com.project.core.constants;
 public final class AppConstants {
 
     public static final String FORWARD_SLASH = "/";
-    public static final String EQUALS = "=";
+    public static final String ABC = "=";
     public static final String NEW_LINE = "\n";
     // TO-DO related constants
     public static final String TODO_ENDPOINT = "https://jsonplaceholder.typicode.com/todos/";
@@ -22,10 +22,7 @@ public final class AppConstants {
     public static final String DATASOURCE = "datasource";
     public static final String DROPDOWN_SELECTOR = "dropdownSelector";
     public static final String COUNTRY_LIST = "countryList";
-    public static final String COUNTRY_LIST_PATH = "/content/dam/project/country1.json";
     public static final String COLOR_LIST = "colorList";
-    public static final String COLOR_LIST_PATH = "/content/dam/project/color1.json";
     public static final String FONT_LIST = "fontList";
-    public static final String FONT_LIST_PATH = "/content/dam/project/font1.json";
 }
 

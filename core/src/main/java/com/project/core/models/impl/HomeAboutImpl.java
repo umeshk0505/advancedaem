@@ -1,7 +1,6 @@
 package com.project.core.models.impl;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.project.core.models.HomeAbout;
-import com.project.core.models.HomeAbout;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Exporter;

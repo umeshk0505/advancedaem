@@ -1,10 +1,7 @@
 package com.project.core.models.impl;
 
-import com.project.core.models.HomeAbout;
 import com.project.core.models.HomeBanner;
-import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
-import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
@@ -18,13 +15,13 @@ import javax.inject.Inject;
     )
     public class HomeBannerImpl implements HomeBanner {
         @Inject
-        String myfirsttext;
+        String bio;
 
         @Inject
-        String mysecondtext;
+        String fullName;
 
         @Inject
-        String multilinefield;
+        String intro;
 
         @Inject
         String button;
@@ -38,17 +35,17 @@ import javax.inject.Inject;
 
         @Override
         public String getBio() {
-            return myfirsttext;
+            return bio;
         }
 
         @Override
         public String getFullName() {
-            return mysecondtext;
+            return fullName;
         }
 
         @Override
         public String getIntro() {
-            return multilinefield;
+            return intro;
         }
 
         @Override

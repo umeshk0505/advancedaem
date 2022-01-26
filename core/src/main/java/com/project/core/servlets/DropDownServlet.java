@@ -26,7 +26,7 @@ import java.util.*;
         })
 public class DropDownServlet extends SlingSafeMethodsServlet {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(DropDownServlet.class);
+    private static Logger logger = LoggerFactory.getLogger(DropDownServlet.class);
     @Override
     protected void doGet(SlingHttpServletRequest request,
                          SlingHttpServletResponse response) {
@@ -40,7 +40,6 @@ public class DropDownServlet extends SlingSafeMethodsServlet {
             List<Resource> list = new ArrayList<>();
             iterator.forEachRemaining(list::add);
             list.forEach(res -> {
-                //ValueMap valueMap = res.getValueMap();
                 String title = res.getName();
                 dropDownList.add(new KeyValue(title, title));
             });
@@ -60,7 +59,7 @@ public class DropDownServlet extends SlingSafeMethodsServlet {
                                     }));
             request.setAttribute(DataSource.class.getName(), ds);
         } catch (Exception e) {
-            LOGGER.error("Error in Get Drop Down Values", e);
+            logger.error("Error in Get Drop Down Values", e);
         }
     }
 
