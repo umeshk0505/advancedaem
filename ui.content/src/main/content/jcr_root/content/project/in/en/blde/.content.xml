@@ -2,56 +2,62 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
-        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
-        cq:lastModified="{Date}2021-12-27T14:15:31.006+05:30"
+        cq:lastModified="{Date}2021-12-27T13:45:00.547+05:30"
         cq:lastModifiedBy="admin"
-        cq:lastReplicated="{Date}2021-12-27T14:10:55.990+05:30"
+        cq:lastReplicated="{Date}2021-12-22T22:35:14.404+05:30"
         cq:lastReplicatedBy="admin"
         cq:lastReplicationAction="Activate"
-        cq:tags="[we-retail:apparel/glasses,we-retail:apparel/gloves,we-retail:apparel/hat,personalproject:responsivewebsite/personaltag]"
+        cq:lastRolledout="{Date}2021-12-27T13:45:00.549+05:30"
+        cq:lastRolledoutBy="admin"
         cq:template="/conf/project/settings/wcm/templates/page-content"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:mixinTypes="[mix:versionable]"
+        jcr:mixinTypes="[cq:LiveRelationship,mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="BlDe"
-        jcr:uuid="84ea8ae5-4579-46ef-aa2b-9488d5ac8c8a"
+        jcr:uuid="4678383d-f43d-40c1-933e-a1d98bd1ae06"
         sling:resourceType="project/components/page"
         time="{Date}2021-12-21T06:48:20.004Z">
         <root
+            cq:lastRolledout="{Date}2021-12-27T13:45:00.469+05:30"
+            cq:lastRolledoutBy="admin"
+            jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="project/components/container"
             layout="responsiveGrid">
             <container
+                cq:lastRolledout="{Date}2021-12-27T13:45:00.479+05:30"
+                cq:lastRolledoutBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="project/components/container"
                 layout="responsiveGrid">
                 <container
-                    jcr:lastModified="{Date}2021-11-30T18:02:21.611+05:30"
+                    cq:lastRolledout="{Date}2021-12-27T13:45:00.491+05:30"
+                    cq:lastRolledoutBy="admin"
+                    jcr:lastModified="{Date}2021-12-27T13:45:00.484+05:30"
                     jcr:lastModifiedBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="project/components/container"
                     layout="responsiveGrid">
-                    <title
-                        cq:styleIds="[1638285745483]"
-                        jcr:created="{Date}2021-12-09T16:17:14.732+05:30"
-                        jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2021-12-09T16:17:14.732+05:30"
-                        jcr:lastModifiedBy="admin"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="project/components/title"/>
                     <additionservlet
+                        cq:lastRolledout="{Date}2021-12-27T13:45:00.512+05:30"
+                        cq:lastRolledoutBy="admin"
                         jcr:created="{Date}2021-12-09T16:10:17.345+05:30"
                         jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2021-12-09T16:10:17.345+05:30"
+                        jcr:lastModified="{Date}2021-12-27T13:45:00.507+05:30"
                         jcr:lastModifiedBy="admin"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="project/components/content/additionservlet"/>
                     <personalcontentfragm
+                        cq:lastRolledout="{Date}2021-12-27T13:45:00.531+05:30"
+                        cq:lastRolledoutBy="admin"
                         jcr:created="{Date}2021-12-13T14:26:34.851+05:30"
                         jcr:createdBy="admin"
                         jcr:lastModified="{Date}2021-12-13T14:33:28.945+05:30"
                         jcr:lastModifiedBy="admin"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="project/components/content/personalcontentfragmentcomponent"
                         displayMode="multi"
@@ -59,20 +65,37 @@
                         paragraphScope="all"
                         variationName="master"/>
                     <schedulerdemo
+                        cq:lastRolledout="{Date}2021-12-27T13:45:00.540+05:30"
+                        cq:lastRolledoutBy="admin"
                         jcr:created="{Date}2021-12-14T21:40:22.259+05:30"
                         jcr:createdBy="admin"
                         jcr:lastModified="{Date}2021-12-21T13:51:53.901+05:30"
                         jcr:lastModifiedBy="admin"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="project/components/content/schedulerdemo"
-                        time="{Date}2021-12-27T14:10:56.004Z"/>
+                        time="{Date}2021-12-27T12:00:00.026Z"/>
                     <card
-                        jcr:created="{Date}2021-12-27T14:15:31.001+05:30"
+                        cq:lastRolledout="{Date}2021-12-27T13:45:00.548+05:30"
+                        cq:lastRolledoutBy="admin"
+                        jcr:created="{Date}2021-12-27T01:01:11.759+05:30"
                         jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2021-12-27T14:15:31.001+05:30"
+                        jcr:lastModified="{Date}2021-12-27T13:09:54.088+05:30"
                         jcr:lastModifiedBy="admin"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="project/components/content/card"/>
+                    <title
+                        cq:lastRolledout="{Date}2021-12-27T13:45:00.524+05:30"
+                        cq:lastRolledoutBy="admin"
+                        cq:styleIds="[1638285745483]"
+                        jcr:created="{Date}2021-12-09T16:17:14.732+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-12-27T13:45:00.518+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="project/components/title"/>
                 </container>
             </container>
         </root>
